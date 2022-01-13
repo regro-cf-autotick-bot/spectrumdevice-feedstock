@@ -1,6 +1,6 @@
 {% set owner = "KCL-BMEIS" %}
 {% set name = "spectrumdevice" %}
-{% set version = "0.1.3" %}
+{% set version = "0.1.4" %}
 
 
 package:
@@ -9,10 +9,10 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: ffc7519468f721d5da36feb59692d8d894a2b297d0d4ade7528aa4899c2d218c
+    sha256: 476e3c5c488b72ecead2ef51e9beb3e2dbfa56318d2b68b7f3eccb621e1a61eb
 
   - url: https://github.com/{{ owner }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: ed88c5b108aafa03b51cab6feaf9992de8598a1aa3a4469a92cf24922eab1c70
+    sha256: 415c43a430718338b5ebe905f3362de0b53bc0bb07dd522c89bdd91126d7f766
     folder: test-data
 
 build:
