@@ -36,8 +36,8 @@ test:
     - pip
     - pytest
   source_files:
-    - test-data/tests
-    - test-data/example_scripts
+    - test-data/src/tests
+    - test-data/src/example_scripts
   commands:
     - pip check
     - pytest
