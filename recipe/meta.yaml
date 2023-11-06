@@ -1,6 +1,6 @@
 {% set owner = "KCL-BMEIS" %}
 {% set name = "spectrumdevice" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 
 package:
@@ -9,10 +9,10 @@ package:
 
 source:
   - url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-    sha256: 209ad1156310710493cc16123f43c3f8086c35fe57dc85ac06e78b900ea166bf
+    sha256: 481d78d035328a4dcc9e5f35c032a58ac04e475a11914dbdba6d119f59fd9e3d
 
   - url: https://github.com/{{ owner }}/{{ name }}/archive/refs/tags/v{{ version }}.tar.gz
-    sha256: 1811e6740dae47b96e5e68e14f8a7be5918b58afeaf625ef7aeb515daff2f535
+    sha256: 02f01bbcb631f3c58a60456b5a6ffdccd3f1d3efb4e925ed37c924cfee7979ac
     folder: test-data
 
 build:
@@ -34,7 +34,7 @@ test:
     - spectrumdevice
   requires:
     - pip
-    - pytest
+    - pytest ==7.4.3
   source_files:
     - test-data/src/tests
     - test-data/src/example_scripts
@@ -46,11 +46,11 @@ about:
   home: https://github.com/KCL-BMEIS/spectrumdevice
   summary: A high-level, object-oriented Python library for controlling Spectrum Instrumentation digitisers
   description: |
-    spectrumdevice is a high-level, object-oriented Python library for controlling Spectrum Instrumentation digitisers.
+    spectrumdevice is a high-level, object-oriented Python library for controlling Spectrum Instrumentation devices.
     It can connect to individual digitisers or StarHubs (e.g. the NetBox). The main module spectrumdevice provides
-    two classes SpectrumCard and SpectrumStarHub for controlling and receiving data from individual digitisers and
-    StarHubs respectively. Mock classes are also provided for testing software without drivers installed or hardware
-    connected.The submodule spectrumdevice.settings provides Enums and Dataclasses wrapping the register values
+    two classes SpectrumDigitiserCard and SpectrumDigitiserStarHub for controlling and receiving data from individual
+    digitisers and StarHubs respectively. Mock classes are also provided for testing software without drivers installed
+    or hardware connected.The submodule spectrumdevice.settings provides Enums and Dataclasses wrapping the register values
     provided by the Spectrum API, to be used for configuring hardware and interpreting responses received from hardware.
   doc_url: https://kcl-bmeis.github.io/spectrumdevice/
   dev_url: https://github.com/KCL-BMEIS/spectrumdevice
