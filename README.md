@@ -13,11 +13,11 @@ Development: https://github.com/KCL-BMEIS/spectrumdevice
 
 Documentation: https://kcl-bmeis.github.io/spectrumdevice/
 
-spectrumdevice is a high-level, object-oriented Python library for controlling Spectrum Instrumentation digitisers.
+spectrumdevice is a high-level, object-oriented Python library for controlling Spectrum Instrumentation devices.
 It can connect to individual digitisers or StarHubs (e.g. the NetBox). The main module spectrumdevice provides
-two classes SpectrumCard and SpectrumStarHub for controlling and receiving data from individual digitisers and
-StarHubs respectively. Mock classes are also provided for testing software without drivers installed or hardware
-connected.The submodule spectrumdevice.settings provides Enums and Dataclasses wrapping the register values
+two classes SpectrumDigitiserCard and SpectrumDigitiserStarHub for controlling and receiving data from individual
+digitisers and StarHubs respectively. Mock classes are also provided for testing software without drivers installed
+or hardware connected.The submodule spectrumdevice.settings provides Enums and Dataclasses wrapping the register values
 provided by the Spectrum API, to be used for configuring hardware and interpreting responses received from hardware.
 
 
@@ -107,7 +107,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
