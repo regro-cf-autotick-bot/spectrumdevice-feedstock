@@ -23,10 +23,10 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python >=3.10
   run:
-    - numpy >=1.21.4
-    - python >=3.8
+    - numpy >=1.26.2
+    - python >=3.10
 
 test:
   imports:
